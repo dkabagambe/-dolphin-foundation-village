@@ -166,10 +166,47 @@
       </div>
       <div class="volunteer_info">
         <h3>Get in Touch</h3>
-        <p>
-          If you are interested send an email to:
-          <span style="color: blue">info@dolphinfoundationvillage.org</span>
-        </p>
+
+        <form action="contact.php" method="post">
+          <h3 style="color: blue">Apply here to become a volunteer</h3>
+          <div>
+            <label for="fname">First Name*</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+          </div>
+          <div>
+            <label for="lname">Last Name*</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+          </div>
+          <div>
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email.."
+            />
+          </div>
+          <div>
+            <label for="subject">Message*</label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message here.."
+            ></textarea>
+          </div>
+          <input type="submit" name="submit" value="Submit" />
+        </form>
       </div>
       <div class="volunteer_info">
         <h3>How to Apply</h3>

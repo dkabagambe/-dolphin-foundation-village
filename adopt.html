@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico" />
+    <meta
+      name="keywords"
+      content="dolphin foundation village,ngo,united nations jobs"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <title>Volunteer at Dolphin | Dolphin Foundation Village</title>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
+      nonce="ezI623ew"
+    ></script>
+    <!--Navigation-->
+    <header>
+      <div>
+        <a href="index.html"
+          ><img src="img/logo.jpg" alt="logo" class="logo"
+        /></a>
+      </div>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="adopt.html">Adopt</a></li>
+          <li><a href="#contact">contact us</a></li>
+        </ul>
+      </nav>
+      <div class="header-hamburger-icon" id="hamburger">
+        <div class="header-hamburger-line-1"></div>
+        <div class="header-hamburger-line-2"></div>
+        <div class="header-hamburger-line-3"></div>
+      </div>
+    </header>
+    <!--adopt-->
+    <div class="adopt">
+      <h2>DOLPIN FOUNDATION VILLIAGE ADOPTION FORM</h2>
+      <h3>EXPRESSION OF INTEREST</h3>
+
+      <form action="adopt.php" method="post" id="adoption">
+        <h3 style="color: blue">Apply here to adopt a baby</h3>
+        <div>
+          <p>Date of Expression of Interest:</p>
+          <input type="date" name="date" />
+        </div>
+        <h3>
+          Please select the box to state your type of interest: (You can select
+          more than one box if appropriate)
+        </h3>
+        <div class="parent">
+          <input
+            type="checkbox"
+            id="parent1"
+            name="foster"
+            value="Fostering-short-term"
+          />
+          <label for="parent1"> Fostering short term</label>
+          <input type="checkbox" id="parent2" name="foster" value="adoption" />
+          <label for="parent2"> Adoption</label>
+          <input
+            type="checkbox"
+            id="parent3"
+            name="foster"
+            value="Fostering-long-term"
+          />
+          <label for="parent3"> Fostering a Long term</label>
+        </div>
+        <div>
+          <h3>What age of child would you consider adopting or fostering?</h3>
+          <div class="parent">
+            <input type="checkbox" id="age1" name="adopt" value="0-6" />
+            <label for="age1">0-6 Months</label>
+            <input type="checkbox" id="age2" name="adopt" value="6-12" />
+            <label for="age2">6-12 Months</label>
+            <input type="checkbox" id="age3" name="adopt" value="12-18" />
+            <label for="age3"> 12-18 Months</label>
+            <input type="checkbox" id="age4" name="adopt" value="18+" />
+            <label for="age4"> 18 Months +</label>
+          </div>
+        </div>
+        <h2>Details of the applicant:</h2>
+        <div class="parent">
+          <label for="fname">First Name/s: </label>
+          <input id="fname" name="fname" type="text" />
+        </div>
+        <div class="parent">
+          <label for="lname">Surname:</label>
+          <input id="lname" name="lname" type="text" />
+          <label for="age">Age:</label>
+          <input id="age" name="age" type="number" />
+          <label for="marital">Marital Status:</label>
+          <input id="marital" name="marital" type="text" />
+        </div>
+        <div class="parent">
+          <label for="address">Address: </label>
+          <input id="address" name="address" type="text" />
+        </div>
+        <div class="parent">
+          <label for="telephone">Tel No Applicant (1) </label>
+          <input id="telephone" name="telephone" type="tel" />
+        </div>
+        <div class="parent">
+          <label for="telephon">Tel No Applicant (2) </label>
+          <input id="telephon" name="telephon" type="tel" />
+        </div>
+        <div class="parent">
+          <label for="email">Email Applicant (1):</label>
+          <input id="email" name="email" type="email" />
+        </div>
+        <div class="parent">
+          <label for="email1">Email Applicant (2):</label>
+          <input id="email1" name="email1" type="email" />
+        </div>
+        <div class="parents">
+          <label for="subject1"
+            >What is your motivation to Adopt/Foster? (Please state clearly
+            below)</label
+          >
+          <textarea id="subject1" name="subject1"></textarea>
+        </div>
+
+        <div class="parents">
+          <label for="subject"
+            >Where did you hear about Ugandans Adopt? (Please state clearly
+            below)</label
+          >
+          <textarea id="message" name="subject2"></textarea>
+        </div>
+        <div class="parents">
+          <label for="subject3">Additional Comments:</label>
+          <textarea id="subject3" name="subject3"></textarea>
+        </div>
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+    </div>
+    <!-- linking whatsapp button -->
+    <div
+      id="qlwapp"
+      class="qlwapp-free qlwapp-button qlwapp-bottom-right qlwapp-all qlwapp-square qlwapp-js-ready desktop"
+    >
+      <div class="qlwapp-container">
+        <a
+          class="qlwapp-toggle"
+          data-action="open"
+          data-phone="256787103020"
+          data-message="Hello! I would like to contact your service."
+          href="https://api.whatsapp.com/send?phone=256787103020&text="
+          target="_blank"
+        >
+          <i
+            class="fab fa-whatsapp"
+            style="margin-right: 5px; color: #fff; font-size: 28px"
+          ></i>
+          <i class="qlwapp-close" data-action="close">×</i>
+          <span class="qlwapp-text">Talk to Us? Let's chat.</span>
+        </a>
+      </div>
+    </div>
+    <section id="contact">
+      <footer>
+        <div class="footer-down">
+          <div>
+            <h3>dolphin foundation village</h3>
+            <ul>
+              <li>Kampala 256 Kiboga, Uganda</li>
+              <li>+256 787 103020</li>
+              <li>info@dolphinfoundationvillage.org</li>
+            </ul>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  width="600"
+                  height="400"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=Kampala%20256%20Kiboga,%20Uganda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe
+                ><br /><style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: auto;
+                    width: auto;
+                  }</style
+                ><style>
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 600px;
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>why Dolphin:</h3>
+
+            <ul>
+              <li>
+                Dolphin Foundation village is a rescue center for abandoned and
+                orphaned babies, offering women education, micro-business
+                opportunities and life skills, reuniting children with extended
+                families and renewing hope to AIDs widows
+              </li>
+              <li>
+                A Rescue Center for Orphaned, Abandoned, and At-Risk babies in
+                Kampala, Uganda. MAP, a mothers against poverty program. Daycare
+                for handicap babies. Save the Moms
+              </li>
+              <li>
+                Are you looking for a way to make a difference in the world,
+                gain new experiences and training, see new career possibilities,
+                do something different, get away from the normal grind, be
+                adventurous, share your faith, or have you always had a secret
+                desire to see Africa? We can help you achieve any and all of
+                those goals
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Facebook:</h3>
+
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/dolphinfoundationvillage/"
+              data-tabs="timeline"
+              data-width=""
+              data-height=""
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/dolphinfoundationvillage/"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/dolphinfoundationvillage/"
+                  >Dolphin Foundation Village</a
+                >
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <span class="copyright">
+          &copy; 2010 dolphin foundation village
+
+          <i class="fa fa-shoe" aria-hidden="true"></i
+        ></span>
+      </footer>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
