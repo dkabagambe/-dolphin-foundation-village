@@ -8,12 +8,17 @@ desktop-1200px*/
   margin: 0;
   box-sizing: border-box;
 }
+html,
 body {
   font-family: "Cormorant Garamond", serif;
   line-height: 1.4;
   font-size: 1rem;
   overflow-x: hidden;
   background-color: #ffffff;
+  height: 100%;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 header {
@@ -21,51 +26,55 @@ header {
   justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
   width: 100%;
-  height: 16vh;
+  height: 12vh;
   position: fixed;
   z-index: 10;
 }
 header .logo {
   display: flex;
-  width: 90px;
+  width: 80px;
   justify-content: flex-start;
   align-items: center;
   background-color: #ffffff;
   cursor: pointer;
-  margin: 10px 2px;
+  margin-left: 10px;
+}
+header .logo img {
+  width: 15vh;
+  margin-left: 10px;
+  position: relative;
+  z-index: 11;
 }
 #menu ul {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 10px;
+  justify-content: center;
   flex-direction: row;
   background-color: #ffffff;
+  height: auto;
+  text-align: center;
+  width: 100%;
+  line-height: normal;
 }
 #menu ul li {
   list-style: none;
-  margin: 10px;
-  font-size: 1.2rem;
   font-weight: bold;
   background-color: #ffffff;
   text-transform: capitalize;
-  color: #414042;
   text-align: center;
+  align-self: center;
 }
 #menu ul li a {
   text-decoration: none;
   color: #414042;
-  font-family: garamond;
+  font-family: serif;
   transition: 0.3s ease;
-  top: 60px;
-  left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 12px;
   background-color: transparent;
   font-weight: 600;
+  font-size: 1rem;
+  padding-right: 15px;
 }
 #menu ul li a:hover {
   color: #e65c49;
@@ -102,27 +111,32 @@ header .logo {
     cursor: pointer;
     margin-right: 10px;
   }
+
   #menu ul {
     position: absolute;
     flex-direction: column;
-    top: 15.5vh;
+    top: 11vh;
     right: 0;
-    height: 80vh;
-    width: 100vw;
-    align-items: center;
-    text-align: center;
+    height: 90vh;
+    width: 70vh;
+    align-items: flex-start;
     justify-content: center;
     transition: right 0.3s ease-in;
-    background-color: transparent;
     transform: translateX(100%);
     background-color: #888;
   }
   #menu ul li {
-    margin-right: 0px;
-    text-decoration: none;
     text-align: center;
-    margin-bottom: 2rem;
     background-color: #888;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+  #menu ul li a {
+    font-size: 16px;
+    line-height: 1px;
+    font-family: dosis;
+    padding-top: 10px;
+    padding-right: 20px;
   }
   .show {
     transition: right 0.3s ease-in;
@@ -145,12 +159,6 @@ header .logo {
     transform: rotate(45deg) translate(-5px, -7px);
   }
 }
-/*Responsiveness fo the nav*/
-/*mobile-576px
-tablet-768px
-laptop-992px
-desktop-1200px*/
-/* styling for the donate button */
 
 .donate {
   background: #00684d;
@@ -195,7 +203,7 @@ footer {
   flex-direction: column;
   background-color: #414042;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: #fff;
   padding: 1rem 0.75rem 1.5rem;
 }
@@ -234,6 +242,7 @@ footer .footer-down h3 {
 .copyright {
   padding: 10px;
   width: 100%;
+  height: 100%;
   text-align: center;
   font-size: 1.5rem;
   font-family: garamond;
@@ -1195,16 +1204,14 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 /* slider css for home page */
 .slider_container {
   display: flex;
-  padding-top: 30px;
+  padding-top: 50px;
   height: 100%;
   width: 100%;
   max-width: 100%;
   text-align: center;
   background-color: rgba(11, 6, 6, 0.127);
   z-index: 10;
-  overflow: hidden;
-  position: absolute;
-  top: 16vh;
+  top: 12vh;
   text-align: center;
   flex: 1;
 }
@@ -1243,6 +1250,8 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   display: flex;
   flex-direction: row;
   background-color: #ffe;
+  width: 95%;
+  height: auto;
 }
 .about .about_info {
   display: grid;
@@ -1252,21 +1261,21 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 }
 .about_info > h3 {
   font-family: serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: blue;
   text-transform: capitalize;
   font-weight: 600;
 }
 .about_info > h6 {
-  font-size: 21px;
-  font-family: "Jazz LET", fantasy;
+  font-size: 19px;
+  font-family: dosis;
   line-height: 1.5;
-  color: #123;
+  color: #222;
 }
 .about_info > p {
-  font-family: "cormorant", upright;
+  font-family: garamond;
   font-size: 1.2rem;
-  line-height: 1.5;
+  line-height: normal;
 }
 .about_img {
   display: flex;
@@ -1285,16 +1294,23 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   border: 3px solid #fff;
 }
 .about_img > p {
-  padding: 5px;
+  text-transform: none !important;
   font-family: garamond;
-  text-transform: capitalize;
+  text-transform: lowercase;
   font-weight: 550;
   font-size: 20px;
+  line-height: 1.2;
 }
-@media (max-width: 782px) {
+@media (max-width: 786px) {
   .about {
     flex-direction: column;
     padding: 15px 12px;
+  }
+  .about_info > p {
+    font-size: 1.2rem;
+    /* padding: 5px; */
+    font-family: garamond;
+    line-height: 1.3;
   }
   .swiper-slide h2 {
     position: absolute;
@@ -1322,9 +1338,11 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   justify-content: center;
   align-items: center;
   background-color: #ffe;
-  margin: 20px 15px;
-  font-family: "cormorant", upright;
+  font-family: garamond;
   color: #000;
+  width: 100%;
+  padding: 2px;
+  height: auto;
 }
 .faith .mission {
   display: flex;
@@ -1333,13 +1351,16 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   justify-self: center;
   align-items: center;
   text-align: left;
-  padding-right: 10px;
+  margin-right: 10px;
+  height: auto;
+  margin-left: 5px;
 }
 .faith .vision {
   flex: 0.6;
   text-align: left;
   gap: 20px;
   padding-bottom: 10px;
+  height: auto;
 }
 .mission h3,
 .vision h3 {
@@ -1347,17 +1368,16 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   font-family: garamond;
   text-transform: uppercase;
   font-weight: 550;
+  line-height: 1.5;
   font-size: 20px;
   align-self: flex-start;
 }
 .mission > p {
-  font-family: "cormorant", upright;
   font-size: 18px;
   line-height: 1.5;
   align-self: flex-start;
 }
 .vision > li {
-  font-family: "cormorant", upright;
   font-size: 18px;
   line-height: 1.8;
   list-style: none;
@@ -1367,12 +1387,14 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   font-size: 18px;
   line-height: 3;
   list-style-type: none;
-  align-self: flex-start;
+  align-self: first baseline;
+  height: auto;
 }
-@media (max-width: 782px) {
+@media (max-width: 786px) {
   .faith {
     flex-direction: column;
     padding: 15px 12px;
+    height: auto;
   }
 }
 #volunteer_1 {
@@ -1383,14 +1405,14 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .volunt {
   display: flex;
-  width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   gap: 20px;
 }
 .volu {
@@ -1437,7 +1459,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   color: #e65c49;
   font-size: 34px;
 }
-@media (max-width: 782px) {
+@media (max-width: 786px) {
   #volunteer_1 {
     flex-direction: column;
     padding: 15px 12px;
@@ -1445,7 +1467,12 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   .volunt {
     flex-direction: column;
     margin: 0 15px;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 5px;
+    position: relative;
   }
+
   .volu {
     flex-direction: column;
     width: 100%;
@@ -1491,7 +1518,6 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: auto;
   position: relative;
   top: 16vh;
   text-align: center;
@@ -1630,45 +1656,30 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
   background-color: #d2a74a;
 }
+/* these are the stylings for the adoption page */
+
 .adopt {
-  display: flex;
-  flex-direction: column;
   padding-top: 20px;
-  height: 100%;
+  margin-bottom: 10px;
+  height: auto !important;
   width: 100%;
-  text-align: center;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("img/hero2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: auto;
   position: relative;
-  top: 16vh;
-  text-align: center;
-  margin-bottom: 130px;
 }
-.adopt {
+.adopts {
+  height: 600px;
+  padding: 15px 10px;
+  width: 100%;
+}
+.adopts img {
+  object-fit: cover;
   height: 100%;
   width: 100%;
-  display: flex;
 }
-.adopt h2 {
-  font-family: garamond !important;
-  font-size: 1.5rem;
-  margin: 20px 10px;
-}
-.adopt h3 {
-  font-family: cormorant;
-  font-size: 20px;
-  margin: 20px 10px;
-}
+
 #adoption {
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 #adoption label {
   font-family: garamond;
@@ -1687,6 +1698,8 @@ form input[type="submit"]:hover {
   text-align: center;
   align-items: center;
   justify-content: center;
+  height: auto;
+  width: 100%;
 }
 #adoption input[type="checkbox"] {
   /* ...existing styles */
@@ -1776,6 +1789,7 @@ form input[type="submit"]:hover {
   align-items: center;
   padding-top: 10px;
   gap: 10px;
+  height: auto;
 }
 #adoption input[type="submit"] {
   background: blue;
@@ -1798,5 +1812,280 @@ form input[type="submit"]:hover {
   .parent {
     display: flex;
     flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  .adopt {
+    height: auto;
+    width: 100%;
+  }
+  .adopts {
+    height: 500px;
+  }
+}
+
+.pages {
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin: 5px auto;
+  position: relative;
+  color: #000000;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 10px 5px 10px;
+  margin-bottom: 20px;
+  font-family: garamond;
+  height: auto;
+}
+.pages h4 {
+  color: black;
+  font-size: 1.5rem;
+  font-family: garamond;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.pages .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.pages .btn a {
+  background-color: #4caf50; /* Green */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: garamond;
+}
+.pages h3 {
+  padding-top: 15px;
+  text-transform: normal;
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: #222;
+  font-family: serif;
+}
+.pages p {
+  font-size: 24px;
+  padding-top: 1.25rem;
+  line-height: 1;
+  text-align: left;
+  font-family: garamond;
+  max-width: 60%;
+  height: 100%;
+}
+.pages ul {
+  height: auto;
+  width: 60%;
+  text-align: center;
+}
+.pages ul li {
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  font-family: garamond;
+  padding-bottom: 5px;
+}
+@media (max-width: 768px) {
+  .pages {
+    width: 100%;
+    margin: 5px;
+    font-family: garamond;
+  }
+  .pages h4 {
+    font-size: 20px;
+  }
+  .pages .btn {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+  .pages .btn a {
+    font-size: 16px;
+    padding: 2px 2px;
+    max-width: 100%;
+  }
+  .pages h3 {
+    font-size: 1.2rem;
+    max-width: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .pages p {
+    font-size: 24px;
+    width: 100%;
+    text-align: left;
+  }
+  .pages ul li {
+    height: auto;
+    width: 100%;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 22px;
+  }
+}
+.accordion {
+  width: 100%;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+  position: relative;
+  text-align: center;
+  font-family: garamond;
+}
+.accordion .container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 10px 10px;
+}
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  font-family: garamond;
+  height: auto;
+}
+
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+/* .accordion .label::before {
+  content: "+";
+  color: blue;
+  position: absolute;
+  top: 50%;
+  right: -5vw;
+  font-size: 30px;
+  font-weight: bolder;
+  transform: translateY(-50%);
+  height: auto;
+} */
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  height: auto;
+}
+.accordion .content .now {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+.content .now > h3 {
+  font-size: 23px;
+  text-align: left;
+  justify-self: flex-start;
+  width: 100%;
+}
+.content .now > div {
+  text-align: left;
+  justify-self: flex-start;
+  padding-left: 35px;
+  padding-right: 20px;
+  height: auto;
+}
+/* Adds a horizontal line between the contents */
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  max-height: 100%;
+  height: 100%;
+}
+
+/* Changes from plus sign to negative sign once active */
+
+/* .accordion .container.active .label::before {
+  content: "-";
+  font-size: 30px;
+  right: -5vw;
+  font-weight: bolder;
+} */
+table caption {
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 800;
+  color: #000;
+  padding-top: 20px;
+  line-height: 3;
+  font-size: 2.5rem;
+}
+thead,
+th,
+tr,
+td {
+  border: 1px solid #222;
+}
+@media (max-width: 768px) {
+  .accordion .content {
+    height: auto;
+  }
+  table caption {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    text-decoration: underline;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .table-striped {
+    width: 100%;
+    font-size: 20px;
+    height: auto;
+    overflow: auto;
+  }
+  thead,
+  th,
+  tr,
+  td {
+    border: 1px solid #222;
+  }
+
+  header {
+    display: flex !important;
+  }
+  .accordion-body {
+    height: auto;
+    width: 100%;
+    margin: auto;
   }
 }

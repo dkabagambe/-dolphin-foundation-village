@@ -33,12 +33,8 @@
       href="img/favicon-16x16.png"
     />
     <link rel="manifest" href="img/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
 
-    <title>Volunteer at Dolphin | Dolphin Foundation Village</title>
+    <title>how to help Dolphin| Dolphin Foundation Village</title>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -59,7 +55,7 @@
       <nav id="menu">
         <ul>
           <li><a href="index.html">home</a></li>
-          <li><a href="volunteer.html">volunteer</a></li>
+          <li><a href="Dolphin_help">how to help</a></li>
           <li><a href="#contact">contact us</a></li>
         </ul>
       </nav>
@@ -166,60 +162,23 @@
       </div>
       <div class="volunteer_info">
         <h3>Get in Touch</h3>
-
-        <form action="contact.php" method="post">
-          <h3 style="color: blue">Apply here to become a volunteer</h3>
-          <div>
-            <label for="fname">First Name*</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="Your name.."
-            />
-          </div>
-          <div>
-            <label for="lname">Last Name*</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="Your last name.."
-            />
-          </div>
-          <div>
-            <label for="email">Email*</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your email.."
-            />
-          </div>
-          <div>
-            <label for="subject">Message*</label>
-
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here.."
-            ></textarea>
-          </div>
-          <input type="submit" name="submit" value="Submit" />
-        </form>
+        <p>
+          If you are interested send an email to:
+          <span style="color: blue">fionambabzi@gmail.com</span>
+        </p>
       </div>
       <div class="volunteer_info">
         <h3>How to Apply</h3>
         <p>
           To apply to volunteer at Dolphin Foundation you will send in your
           application to
-          <span style="color: blue">info@dolphinfoundationvillage.org</span>
-          then wait for your application and dates to be approved. If you do not
-          receive a return email within 2 weeks, remember it is Africa, and try
-          again. Once you are approved you will send in a $100 deposit which
-          will hold your bed space in the volunteer house. You will not be
-          reserved to volunteer at Dolphin until the $100 deposit is made.
-          Wanting to come is not the same thing as coming!
+          <span style="color: blue">fionambabzi@gmail.com</span> then wait for
+          your application and dates to be approved. If you do not receive a
+          return email within 2 weeks, remember it is Africa, and try again.
+          Once you are approved you will send in a $100 deposit which will hold
+          your bed space in the volunteer house. You will not be reserved to
+          volunteer at Dolphin until the $100 deposit is made. Wanting to come
+          is not the same thing as coming!
         </p>
         <p>
           After being approved to volunteer and after we receive your $100
@@ -243,9 +202,9 @@
         <a
           class="qlwapp-toggle"
           data-action="open"
-          data-phone="256787103020"
+          data-phone="2753324459"
           data-message="Hello! I would like to contact your service."
-          href="https://api.whatsapp.com/send?phone=256787103020&text="
+          href="https://api.whatsapp.com/send?phone=2753324459&text="
           target="_blank"
         >
           <i
@@ -265,7 +224,7 @@
             <ul>
               <li>Kampala 256 Kiboga, Uganda</li>
               <li>+256 787 103020</li>
-              <li>info@dolphinfoundationvillage.org</li>
+              <li>fionambabzi@gmail.com</li>
             </ul>
             <div class="mapouter">
               <div class="gmap_canvas">
@@ -350,8 +309,11 @@
         </div>
 
         <span class="copyright">
-          &copy; 2010 dolphin foundation village
-
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          dolphin foundation village
           <i class="fa fa-shoe" aria-hidden="true"></i
         ></span>
       </footer>
