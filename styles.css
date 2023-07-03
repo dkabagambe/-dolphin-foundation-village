@@ -14,7 +14,7 @@ body {
   line-height: 1.4;
   font-size: 1rem;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: #fafafa;
   height: 100%;
   max-width: 100%;
   -webkit-text-size-adjust: 100%;
@@ -24,7 +24,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: #fafafa;
   align-items: center;
   padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
@@ -38,7 +38,7 @@ header .logo {
   width: 80px;
   justify-content: flex-start;
   align-items: center;
-  background-color: #ffffff;
+
   cursor: pointer;
   margin-left: 10px;
 }
@@ -52,7 +52,7 @@ header .logo img {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color: #ffffff;
+  background-color: #fafafa;
   height: auto;
   text-align: center;
   width: 100%;
@@ -61,7 +61,6 @@ header .logo img {
 #menu ul li {
   list-style: none;
   font-weight: bold;
-  background-color: #ffffff;
   text-transform: capitalize;
   text-align: center;
   align-self: center;
@@ -201,35 +200,38 @@ header .logo img {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #414042;
+  background-color: #646464;
   width: 100%;
   height: auto;
   color: #fff;
   padding: 1rem 0.75rem 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 footer .footer-down {
-  padding: 20px 5px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 20px;
   text-align: center;
   color: #fff;
 }
 footer .footer-down ul li {
   list-style: none;
-  margin: 10px;
   text-transform: none;
   font-size: 20px;
-  color: #fff;
+  color: #f8f8f8;
   cursor: pointer;
   line-height: normal;
+  text-align: justify;
+  padding-bottom: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 footer .footer-down h3 a {
   color: #fff;
   cursor: pointer;
   font-weight: 500;
-  padding: 5px;
+  padding-bottom: 15px;
   font-size: 20px;
 }
 footer .footer-down h3 {
@@ -250,21 +252,6 @@ footer .footer-down h3 {
   font-weight: bold;
 }
 
-@media (max-width: 992px) {
-  footer {
-    display: flex;
-    background-color: #414042;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    padding: 2rem 0;
-  }
-  .footer-down {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 /*Responsiveness fo the nav*/
 /*mobile-576px
 tablet-768px
@@ -274,24 +261,31 @@ desktop-1200px*/
   footer {
     display: flex;
     flex-direction: column;
-    background-color: #414042;
-    padding: 3rem 0.75rem 2.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
   }
   footer .footer-down {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    width: 99%;
   }
-}
-@media (max-width: 576px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #414042;
-    padding: 3rem 0.75rem 2.5rem;
+  footer .footer-down ul {
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 40px;
   }
-  footer .footer-down {
-    display: flex;
-    flex-direction: column;
+  footer .footer-down ul li {
+    text-align: left !important;
+    width: 100%;
+    padding-right: 70px;
+    padding-left: 60px;
+    padding-bottom: 0;
+    font-family: garamond;
   }
 }
 
@@ -1203,45 +1197,69 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 
 /* slider css for home page */
 .slider_container {
+  position: relative;
   display: flex;
-  padding-top: 50px;
-  height: 100%;
+  height: calc(
+    100vh - 12vh
+  ); /* Adjusted height to consider the navbar height */
   width: 100%;
   max-width: 100%;
   text-align: center;
   background-color: rgba(11, 6, 6, 0.127);
   z-index: 10;
-  top: 12vh;
-  text-align: center;
-  flex: 1;
+  overflow: hidden;
+  align-items: center;
+  padding: 0px;
+  margin-top: 100px;
 }
-.swiper-wrapper {
-  padding: 30px 10;
-  text-align: center;
-  max-height: 700;
+.swiper-slide {
+  position: relative;
+  height: 100%; /* Set the height of each slide to 100% */
 }
+
 .swiper-slide img {
   width: 100%;
-  display: block;
-  height: 650px;
-  max-width: 100%;
-  max-height: 100%;
-  text-align: center !important;
-  padding: 3px;
+  height: 600px;
   object-fit: cover;
-  text-align: center;
-  padding-top: 30px;
 }
 .swiper-slide h2 {
   position: absolute;
-  top: 94%;
+  bottom: 20px; /* Adjust the position of the text as needed */
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: #fff;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  color: #fafafa;
   font-size: 21px;
-  font-family: garamond;
+  font-family: dosis;
   font-weight: 600;
+}
+@media (max-width: 768px) {
+  .swiper-container {
+    height: 480px;
+    padding: 10px;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+  .swiper-slide h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .swiper-container {
+    height: 500px;
+    width: 100%;
+  }
+  .swiper-slide h2 {
+    font-size: 18px;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
 }
 .about {
   font-family: cormorant;
@@ -1249,8 +1267,8 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   margin: 10px 5x;
   display: flex;
   flex-direction: row;
-  background-color: #ffe;
-  width: 95%;
+  background-color: #f5f5f5;
+  width: 100%;
   height: auto;
 }
 .about .about_info {
@@ -1276,6 +1294,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   font-family: garamond;
   font-size: 1.2rem;
   line-height: normal;
+  padding: 5px;
 }
 .about_img {
   display: flex;
@@ -1312,37 +1331,18 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
     font-family: garamond;
     line-height: 1.3;
   }
-  .swiper-slide h2 {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: blue;
-    font-size: 18px;
-    font-family: garamond;
-    text-align: center;
-  }
 }
 .faith {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
-    ),
-    url("img/wp.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #ffe;
   font-family: garamond;
   color: #000;
   width: 100%;
   padding: 2px;
   height: auto;
+  background-color: #f5f5f5;
 }
 .faith .mission {
   display: flex;
@@ -1399,7 +1399,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 }
 #volunteer_1 {
   padding: 15px 10px;
-  background-color: #ffe;
+  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1416,7 +1416,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   gap: 20px;
 }
 .volu {
-  background-color: #ffe;
+  background-color: #fafafa;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1507,7 +1507,7 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  height: 100%;
+  height: auto;
   width: 100%;
   text-align: center;
   background: linear-gradient(
@@ -1529,13 +1529,13 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
 }
 .volunteer > img {
   padding: 10px;
-  display: grid;
-  place-items: center;
+  height: auto;
+  width: 100%;
   object-fit: cover;
 }
 .volunteer_info {
   display: flex;
-  height: 100%;
+  height: auto;
   width: 100%;
   flex-direction: column;
 }
