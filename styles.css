@@ -67,12 +67,12 @@ header .logo img {
 }
 #menu ul li a {
   text-decoration: none;
-  color: #414042;
+  color: #222;
   font-family: serif;
   transition: 0.3s ease;
   background-color: transparent;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 550;
+  font-size: 17px;
   padding-right: 15px;
 }
 #menu ul li a:hover {
@@ -94,7 +94,7 @@ header .logo img {
 .header-hamburger-line-1,
 .header-hamburger-line-2,
 .header-hamburger-line-3 {
-  background-color: #888;
+  background-color: #000000;
   width: 1.78rem;
   height: 0.2rem;
   transition: all 0.2s ease-in-out;
@@ -107,17 +107,19 @@ header .logo img {
 @media (max-width: 768px) {
   .header-hamburger-icon {
     display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 0px;
   }
 
   #menu ul {
     position: absolute;
     flex-direction: column;
-    top: 11vh;
+    top: 10vh;
     right: 0;
     height: 90vh;
-    width: 70vh;
+    width: 75vh;
     align-items: flex-start;
     justify-content: center;
     transition: right 0.3s ease-in;
@@ -129,13 +131,16 @@ header .logo img {
     background-color: #888;
     margin-bottom: 20px;
     padding-right: 20px;
+    padding-bottom: 30px;
   }
   #menu ul li a {
-    font-size: 16px;
+    font-weight: 550;
+    font-size: 17px;
     line-height: 1px;
     font-family: dosis;
     padding-top: 10px;
     padding-right: 20px;
+    color: #111;
   }
   .show {
     transition: right 0.3s ease-in;
@@ -204,7 +209,7 @@ footer {
   width: 100%;
   height: auto;
   color: #fff;
-  padding: 1rem 0.75rem 1.5rem;
+  padding: 1rem 0.75rem 0.1rem;
   align-items: center;
   justify-content: center;
 }
@@ -261,7 +266,7 @@ desktop-1200px*/
   footer {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
+    padding: 1rem 0.75rem;
     text-align: center;
     justify-content: center;
     width: 100%;
@@ -270,7 +275,7 @@ desktop-1200px*/
     display: grid;
     grid-template-columns: 1fr;
     place-content: center;
-    width: 99%;
+    max-width: 100%;
   }
   footer .footer-down ul {
     width: 100%;
@@ -1659,11 +1664,13 @@ form input[type="submit"]:hover {
 /* these are the stylings for the adoption page */
 
 .adopt {
-  padding-top: 20px;
+  margin-top: 20px;
   margin-bottom: 10px;
   height: auto !important;
   width: 100%;
   position: relative;
+  height: auto;
+  background-color: #fafafa;
 }
 .adopts {
   height: 600px;
@@ -1820,35 +1827,37 @@ form input[type="submit"]:hover {
   .adopt {
     height: auto;
     width: 100%;
+    margin: 10px auto;
   }
   .adopts {
-    height: 500px;
+    height: 400px;
+  }
+
+  .adopts img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 }
 
 .pages {
   display: flex;
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  margin: 5px auto;
   position: relative;
-  color: #000000;
   align-items: center;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
   padding: 20px 10px 5px 10px;
-  margin-bottom: 20px;
   font-family: garamond;
   height: auto;
 }
 .pages h4 {
   color: black;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-family: garamond;
   padding-top: 15px;
+  font-weight: 550;
   padding-bottom: 15px;
 }
 .pages .btn {
@@ -1856,37 +1865,36 @@ form input[type="submit"]:hover {
   justify-content: space-between;
   align-items: center;
   margin: 10px;
+  border-radius: 8px;
 }
 .pages .btn a {
   background-color: #4caf50; /* Green */
-  border: none;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
   cursor: pointer;
-  background-color: white;
+  margin: 10px;
+  background-color: #fafafa;
   color: black;
   border: 2px solid #4caf50;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: garamond;
 }
 .pages h3 {
   padding-top: 15px;
   text-transform: normal;
-  font-size: 3em;
-  font-weight: 700;
-  line-height: 1;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.7;
   text-align: center;
   color: #222;
-  font-family: serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .pages p {
-  font-size: 24px;
+  font-size: 22px;
   padding-top: 1.25rem;
-  line-height: 1;
+  line-height: 1.3;
   text-align: left;
   font-family: garamond;
   max-width: 60%;
@@ -1898,7 +1906,7 @@ form input[type="submit"]:hover {
   text-align: center;
 }
 .pages ul li {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
   text-align: left;
   font-family: garamond;
@@ -1911,9 +1919,14 @@ form input[type="submit"]:hover {
     font-family: garamond;
   }
   .pages h4 {
-    font-size: 20px;
+    color: #111;
+    font-size: 3rem;
+    font-family: garamond;
+    padding-top: 5px;
+    font-weight: 550;
+    padding-bottom: 10px;
   }
-  .pages .btn {
+  /* .pages .btn {
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
@@ -1922,19 +1935,20 @@ form input[type="submit"]:hover {
     font-size: 16px;
     padding: 2px 2px;
     max-width: 100%;
-  }
+  } */
   .pages h3 {
-    font-size: 1.2rem;
-    max-width: 100%;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 1.8rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    line-height: 1.5;
   }
   .pages p {
-    font-size: 24px;
+    font-size: 22px;
     width: 100%;
     text-align: left;
+    max-width: 80%;
   }
+
   .pages ul li {
     height: auto;
     width: 100%;
@@ -1948,8 +1962,8 @@ form input[type="submit"]:hover {
   width: 100%;
   margin: 90px auto;
   color: black;
-  background-color: white;
-  padding: 45px 45px;
+  background-color: #fafafa;
+  padding: 15px;
   position: relative;
   text-align: center;
   font-family: garamond;
@@ -1966,8 +1980,8 @@ form input[type="submit"]:hover {
 .accordion .label {
   position: relative;
   padding: 10px 0;
-  font-size: 30px;
-  color: black;
+  font-size: 2.5rem;
+  color: rgb(54, 54, 180);
   cursor: pointer;
   font-family: garamond;
   height: auto;
@@ -1991,9 +2005,8 @@ form input[type="submit"]:hover {
 
 .accordion .content {
   position: relative;
-  background: white;
   height: 0;
-  font-size: 20px;
+  font-size: 23px;
   text-align: center;
   width: 100%;
   margin: 10px;
@@ -2001,25 +2014,40 @@ form input[type="submit"]:hover {
 }
 .accordion .content .now {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: auto;
   width: 100%;
+  align-items: center;
 }
 .content .now > h3 {
+  display: flex;
+  flex-direction: column;
   font-size: 23px;
   text-align: left;
-  justify-self: flex-start;
   width: 100%;
+  flex: 0.2;
+  height: auto;
+  padding-right: 20px;
+  margin-bottom: 30px;
 }
 .content .now > div {
-  text-align: left;
-  justify-self: flex-start;
-  padding-left: 35px;
+  text-align: justify;
+  justify-self: center;
+  padding-left: 0;
+  margin-left: 0;
   padding-right: 20px;
   height: auto;
+  flex: 0.8;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 22px;
 }
 /* Adds a horizontal line between the contents */
 
+.accordion h1 {
+  width: 100;
+  text-align: center;
+}
 .accordion hr {
   width: 100;
   margin-left: 0;
@@ -2029,8 +2057,7 @@ form input[type="submit"]:hover {
 /* Unhides the content part when active. Sets the height */
 
 .accordion .container.active .content {
-  max-height: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /* Changes from plus sign to negative sign once active */
@@ -2041,6 +2068,15 @@ form input[type="submit"]:hover {
   right: -5vw;
   font-weight: bolder;
 } */
+
+.tabs {
+  height: auto;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  margin: 5px 20px;
+}
+
 table caption {
   text-decoration: underline;
   text-align: center;
@@ -2056,7 +2092,19 @@ tr,
 td {
   border: 1px solid #222;
 }
+.table {
+  width: 100%;
+  font-size: 20px;
+  height: auto;
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
 @media (max-width: 768px) {
+  .tabs {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
   .accordion .content {
     height: auto;
   }
@@ -2067,17 +2115,28 @@ td {
     font-weight: 600;
     line-height: normal;
   }
-  .table-striped {
-    width: 100%;
-    font-size: 20px;
-    height: auto;
-    overflow: auto;
+  .table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent table cells from wrapping */
   }
+
   thead,
   th,
   tr,
   td {
     border: 1px solid #222;
+  }
+
+  tr,
+  td {
+    font-size: 16px;
+    width: 50%;
   }
 
   header {
@@ -2088,4 +2147,18 @@ td {
     width: 100%;
     margin: auto;
   }
+}
+.content > h3 {
+  color: #303030;
+  font-size: 23px;
+  text-align: justify;
+  width: 98%;
+  padding: 15px;
+}
+.content p {
+  color: #303030;
+  font-size: 22px;
+  text-align: justify;
+  width: 98%;
+  padding: 15px;
 }
