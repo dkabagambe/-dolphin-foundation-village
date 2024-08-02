@@ -64,7 +64,7 @@ header .logo img {
   text-align: center;
   align-self: center;
 }
-#menu ul li a {
+#menu ul li:not(:last-child) a {
   text-decoration: none;
   color: #222;
   font-family: garamond;
@@ -74,7 +74,7 @@ header .logo img {
   font-size: 17px;
   padding-right: 15px;
 }
-#menu ul li a:hover {
+#menu ul li:not(:last-child) a:hover {
   color: #e65c49;
   transition: 0.5ms ease;
   text-decoration: none;
@@ -93,8 +93,8 @@ header .logo img {
 .header-hamburger-line-1,
 .header-hamburger-line-2,
 .header-hamburger-line-3 {
-  background-color: #000000;
-  width: 1.78rem;
+  background-color: blue;
+  width: 1.58rem;
   height: 0.2rem;
   transition: all 0.2s ease-in-out;
   position: relative;
@@ -129,10 +129,10 @@ header .logo img {
     text-align: center;
     background-color: #888;
     margin-bottom: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-bottom: 30px;
   }
-  #menu ul li a {
+  #menu ul li:not(:last-child) a {
     font-weight: 600;
     font-size: 16px;
     line-height: 1px;
@@ -162,42 +162,25 @@ header .logo img {
     transform: rotate(45deg) translate(-5px, -7px);
   }
 }
-
 .donate {
-  background: #00684d;
-  background: -webkit-linear-gradient(
-      top,
-      transparent 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    -webkit-linear-gradient(left, lighten(#00684d, 15%) 0%, #00684d 50%, lighten(
-            #00684d,
-            15%
-          )
-          100%);
-  background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    ),
-    linear-gradient(
-      to right,
-      lighten(#00684d, 15%) 0%,
-      #00684d 50%,
-      lighten(#00684d, 15%) 100%
-    );
-
-  border-radius: 20px;
-  color: blue !important;
-  padding: 15px 65px 15px 15px;
-  text-shadow: 1px 1px 5px #666;
-  -webkit-transition: all 800ms;
-  transition: all 800ms;
+  background: #00684d; /* Green background */
   border-radius: 10px;
+  color: white; /* White text */
+  padding: 10px;
+  text-shadow: 1px 1px 5px #666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif; /* Apply Open Sans to the button */
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  border: 2px solid #00ffd5;
+  font-family: cormorant;
 }
 
 .donate:hover {
-  color: red !important;
+  color: white; /* White text on hover */
 }
 
 /* styling for the footer */
